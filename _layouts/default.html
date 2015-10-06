@@ -6,23 +6,28 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' }}/" />
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
     <style>
     *, *:before, *:after { box-sizing: border-box; }
-    body { font-family: monospace; font-size: 14px; }
+    body { font-family: monospace; font-size: 13px; }
     body > header { border-bottom: 1px dashed #aaa;  color: #aaa; }
     body > header a, body > footer a { color: #aaa; }
-    body > header a:hover, body > footer a:hover {color: #111; }
+    body > header a:hover, body > footer a:hover { color: #111; }
     body > header a { text-decoration: none; }
     .blarg-content { padding: 1em 0; }
-    p > code, pre { background-color: #dee; border: 1px solid #bcc; font-size: .90em; }
-    p > code { padding: 2px; }
+    p { line-height: 15px; }
+    h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
+    p > code, pre { background-color: #eee; border: 1px solid #ccc; font-size: .90em; }
     pre { padding: 10px; }
+    code { padding: 0 3px; }
     h1, h2, h3, h4, h5, h6 { font-size: 1.15em; }
-    a { color: #ff00ff; }
+    a { color: #bb00bb; }
+    blockquote { border: 1px solid #ccc; padding: 5px; }
     .posts-index { list-style-type: none; margin: 0; padding: 0; }
-    .post-date { font-weight: bold; }
+    .post { max-width: 80em; }
+    .post-date { display: inline-block; font-weight: bold; width: 10.5em; }
     .post-meta { color: #bb88bb; font-size: .85em; }
+    .post-meta::before { content: '- ';}
     body > footer { border-top: 1px dashed #aaa; color: #aaa; }
     body > footer ul { list-style-type: none; margin: 0; padding: 0; }
     @media (min-width: 750px) {
