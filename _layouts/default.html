@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="{{ site.description }}">
-    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
     <style>
     *, *:before, *:after { box-sizing: border-box; }
-    body { font-family: monospace; font-size: 13px; }
+    body { color: #222; font-family: monospace; font-size: 13px; }
     body > header { border-bottom: 1px dashed #aaa;  color: #aaa; }
     body > header a, body > footer a { color: #aaa; }
     body > header a:hover, body > footer a:hover { color: #111; }
@@ -17,10 +18,23 @@
     .blarg-content { padding: 1em 0; }
     p { line-height: 15px; }
     h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
-    p > code, pre { background-color: #eee; border: 1px solid #ccc; font-size: .90em; }
-    pre { padding: 10px; }
+    p > code, li > code, blockquote > code, pre { 
+        background-color: #ddffff;
+        border: 1px solid #aac;
+        display: inline-block;
+        font-size: .90em;
+        margin-top: .125em;
+    }
+    pre { padding: 10px; width: auto; }
     code { padding: 0 3px; }
-    h1, h2, h3, h4, h5, h6 { font-size: 1.15em; }
+    .highlight { max-width: 100%; overflow-x: scroll; }
+    h1, h2, h3, h4, h5, h6 { color: #444; }
+    h1 { border-bottom: 1px solid black; font-size: 1.5em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.2em; }
+    h5 { font-size: 1.1em; }
+    h6 { font-size: 1em; }
     a { color: #bb00bb; }
     blockquote { border: 1px solid #ccc; padding: 5px; }
     .posts-index { list-style-type: none; margin: 0; padding: 0; }
@@ -99,7 +113,7 @@
   </head>
   <body>
     <header>
-        <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
     </header>
     <div class="blarg-content">
       {{ content }}
