@@ -1,5 +1,5 @@
 # Site settings
-title: adam sings the blues
+title: to `jekyll serve` man
 email: adam.malantonio@gmail.com
 description: pizza pies and libraries and websites
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
@@ -10,3 +10,7 @@ permalink: /:year/:month/:day/:title.html
 
 # Build settings
 markdown: redcarpet
+
+redcarpet:
+  # enable auto ids for redcarpet
+  extensions:    ["with_toc_data"]

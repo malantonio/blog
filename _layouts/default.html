@@ -18,10 +18,9 @@
     .blarg-content { padding: 1em 0; }
     p { line-height: 15px; }
     h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
-    p > code, li > code, blockquote > code, pre { 
-        background-color: #ddffff;
+    p code, li > code, blockquote > code, pre {
+        background-color: #eee;
         border: 1px solid #aac;
-        display: inline-block;
         font-size: .90em;
         margin-top: .125em;
     }
@@ -29,7 +28,7 @@
     code { padding: 0 3px; }
     .highlight { max-width: 100%; overflow-x: scroll; }
     h1, h2, h3, h4, h5, h6 { color: #444; }
-    h1 { border-bottom: 1px solid black; font-size: 1.5em; }
+    h1 { border-bottom: 1px solid #444; font-size: 1.5em; }
     h2 { font-size: 1.4em; }
     h3 { font-size: 1.3em; }
     h4 { font-size: 1.2em; }
@@ -39,14 +38,23 @@
     blockquote { border: 1px solid #ccc; padding: 5px; }
     .posts-index { list-style-type: none; margin: 0; padding: 0; }
     .post { max-width: 80em; }
+    .post img { border: 1px dotted #aa77aa; }
     .post-date { display: inline-block; font-weight: bold; width: 10.5em; }
     .post-meta { color: #bb88bb; font-size: .85em; }
     .post-meta::before { content: '- ';}
     body > footer { border-top: 1px dashed #aaa; color: #aaa; }
     body > footer ul { list-style-type: none; margin: 0; padding: 0; }
+
     @media (min-width: 750px) {
       body > footer li { display: inline-block; }
       body > footer li:not(:last-of-type)::after { content: '•'; margin-left: 10px;}
+    }
+
+    @media (max-width: 750px) {
+      pre {
+        display: inline-block;
+        min-width: 100%;
+      }
     }
 
     /* sin tax (from jekyll default) */
