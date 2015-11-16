@@ -10,24 +10,23 @@
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
     <style>
     *, *:before, *:after { box-sizing: border-box; }
-    body { color: #222; font-family: monospace; font-size: 13px; }
+    body { color: #222; font-family: 'Arial', sans-serif; }
     body > header { border-bottom: 1px dashed #aaa;  color: #aaa; }
     body > header a, body > footer a { color: #aaa; }
     body > header a:hover, body > footer a:hover { color: #111; }
     body > header a { text-decoration: none; }
-    .blarg-content { padding: 1em 0; }
-    p { line-height: 15px; }
+    .blarg-content { margin: auto; padding: 1em 0; width: 90%; }
     h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
     p code, li > code, blockquote > code, pre {
-        background-color: #eee;
-        border: 1px solid #aac;
+        background-color: #fff0ce;
+        border: 1px solid #ddd0ae;
         font-size: .90em;
         margin-top: .125em;
     }
     pre { padding: 10px; width: auto; }
     code { padding: 0 3px; }
     .highlight { max-width: 100%; overflow-x: scroll; }
-    h1, h2, h3, h4, h5, h6 { color: #444; }
+    h1, h2, h3, h4, h5, h6 { color: #444; margin: .125em auto; }
     h1 { border-bottom: 1px solid #444; font-size: 1.5em; }
     h2 { font-size: 1.4em; }
     h3 { font-size: 1.3em; }
@@ -36,8 +35,9 @@
     h6 { font-size: 1em; }
     a { color: #bb00bb; }
     blockquote { border: 1px solid #ccc; padding: 5px; }
+    blockquote cite { display: block; margin-left: 1em; }
+    blockquote cite:before { content: '\2014'; margin-right: .25em; }
     .posts-index { list-style-type: none; margin: 0; padding: 0; }
-    .post { max-width: 80em; }
     .post img { border: 1px dotted #aa77aa; }
     .post-date { display: inline-block; font-weight: bold; width: 10.5em; }
     .post-meta { color: #bb88bb; font-size: .85em; }
@@ -55,7 +55,14 @@
         display: inline-block;
         min-width: 100%;
       }
+
+      .blarg-content { width: 100%; }
     }
+
+    .face { border-radius: 100%; float: right; }
+
+    /* fix dat float */
+    .blarg-content:after { clear: both; content: ""; display: table; }
 
     /* sin tax (from jekyll default) */
     .highlight .c { color: #999988; font-style: italic } /* Comment */
