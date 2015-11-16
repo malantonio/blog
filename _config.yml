@@ -3,7 +3,7 @@ title: to `jekyll serve` man
 email: adam.malantonio@gmail.com
 description: pizza pies and libraries and websites
 baseurl: "/blog" # the subpath of your site, e.g. /blog/
-url: http://malantonio.github.io # the base hostname & protocol for your site
+url: http://adam.malantonio.com # the base hostname & protocol for your site
 twitter_username: afrmalantonio
 github_username:  malantonio
 permalink: /:year/:month/:day/:title.html
