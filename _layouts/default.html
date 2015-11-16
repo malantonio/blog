@@ -17,7 +17,7 @@
     body > header a { text-decoration: none; }
     .blarg-content { margin: auto; padding: 1em 0; width: 90%; }
     h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
-    p code, li > code, blockquote > code, pre {
+    p code, li > code, blockquote > code, pre, aside code {
         background-color: #fff0ce;
         border: 1px solid #ddd0ae;
         font-size: .90em;
@@ -34,6 +34,13 @@
     h5 { font-size: 1.1em; }
     h6 { font-size: 1em; }
     a { color: #bb00bb; }
+    aside {
+        background-color: #dee;
+        border: 1px solid #bcc;
+        margin: 1em auto;
+        padding: 1em;
+        width: 95%;
+    }
     blockquote { border: 1px solid #ccc; padding: 5px; }
     blockquote cite { display: block; margin-left: 1em; }
     blockquote cite:before { content: '\2014'; margin-right: .25em; }
@@ -46,17 +53,17 @@
     body > footer ul { list-style-type: none; margin: 0; padding: 0; }
 
     @media (min-width: 750px) {
-      body > footer li { display: inline-block; }
-      body > footer li:not(:last-of-type)::after { content: '•'; margin-left: 10px;}
+        body > footer li { display: inline-block; }
+        body > footer li:not(:last-of-type)::after { content: '•'; margin-left: 10px;}
     }
 
     @media (max-width: 750px) {
-      pre {
-        display: inline-block;
-        min-width: 100%;
-      }
+        pre {
+            display: inline-block;
+            min-width: 100%;
+        }
 
-      .blarg-content { width: 100%; }
+        .blarg-content { width: 100%; }
     }
 
     .face { border-radius: 100%; float: right; }
@@ -141,6 +148,7 @@
         {% if site.twitter_username %}
         <li>tweets: <a href="https://twitter.com/{{ site.twitter_username }}">@{{ site.twitter_username }}</a></li>
         {% endif %}
+        <li><a href="{{ site.baseurl }}/about.html">new internet who this?</a></li>
       </ul>
     </footer>
   </body>

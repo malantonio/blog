@@ -14,5 +14,4 @@ exclude: [readme.md]
 markdown: redcarpet
 
 redcarpet:
-  # enable auto ids for redcarpet
-  extensions:    ["with_toc_data"]
+  extensions: ["with_toc_data", "tables", "footnotes"]
