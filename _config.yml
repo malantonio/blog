@@ -9,9 +9,3 @@ github_username:  malantonio
 permalink: /:year/:month/:day/:title.html
 
 exclude: [readme.md]
-
-# Build settings
-markdown: redcarpet
-
-redcarpet:
-  extensions: ["with_toc_data", "tables", "footnotes"]
