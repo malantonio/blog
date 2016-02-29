@@ -8,6 +8,7 @@
     <meta name="description" content="{{ site.description }}">
     <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.png">
     <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace:'index.html','' }}">
+    <link rel="alternate" href="{{ site.url }}{{ site.baseurl }}/feed.xml" type="application/rss+xml" title="Edible feed">
     <style>
     *, *:before, *:after { box-sizing: border-box; }
     body { color: #222; font-family: 'Arial', sans-serif; }
@@ -16,18 +17,21 @@
     body > header a:hover, body > footer a:hover { color: #111; }
     body > header a { text-decoration: none; }
     .blarg-content { margin: auto; padding: 1em 0; width: 90%; }
+    .post-title { border-bottom: 1px solid #444; font-size: 1.75em; }
     h1 code, h2 code, h3 code, h4 code, h5 code, h6 code, a code,
     p code, li > code, blockquote > code, pre, aside code {
-        background-color: #fff0ce;
-        border: 1px solid #ddd0ae;
-        font-size: .90em;
-        margin-top: .125em;
+        background-color: #fff;
+        border: 1px solid #ff22aa;
+        border-radius: 2px;
+        font-size: .95em;
+        line-height: 1.25em;
+        padding: 1px 2px;
     }
     pre { padding: 10px; width: auto; }
     code { padding: 0 3px; }
     .highlight { max-width: 100%; overflow-x: scroll; }
     h1, h2, h3, h4, h5, h6 { color: #444; margin: .125em auto; }
-    h1 { border-bottom: 1px solid #444; font-size: 1.5em; }
+    h1 { font-size: 1.5em; }
     h2 { font-size: 1.4em; }
     h3 { font-size: 1.3em; }
     h4 { font-size: 1.2em; }
@@ -45,12 +49,13 @@
     blockquote cite { display: block; margin-left: 1em; }
     blockquote cite:before { content: '\2014'; margin-right: .25em; }
     .posts-index { list-style-type: none; margin: 0; padding: 0; }
-    .post img { border: 1px dotted #aa77aa; }
+    .post img { border: 1px dotted #aa77aa; max-width: 100%; }
     .post-date { display: inline-block; font-weight: bold; width: 10.5em; }
     .post-meta { color: #bb88bb; font-size: .85em; }
     .post-meta::before { content: '- ';}
     body > footer { border-top: 1px dashed #aaa; color: #aaa; }
     body > footer ul { list-style-type: none; margin: 0; padding: 0; }
+    table { width: 100%; }
 
     @media (min-width: 750px) {
         body > footer li { display: inline-block; }
